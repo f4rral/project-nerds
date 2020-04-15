@@ -29,16 +29,89 @@
 
       <section>
         <h2>Фильтр шаблонов</h2>
-        <!-- Здесь будут фильтры -->
+        <form action="http://echo.htmlacademy.ru" method="get">
+          <fieldset>
+            <legend>Стоимость:</legend>
+            <p>
+              <label for="filter-price">Цена</label>
+              <input type="range" id="filter-price" min="0" max="25000" step="500">
+            </p>
+            <p>
+              <label for="filter-price-min">От</label>
+              <input type="number" id="filter-price-min">
+            </p>
+            <p>
+              <label for="filter-price-max">До</label>
+              <input type="number" id="filter-price-max">
+            </p>
+          </fieldset>
+          <fieldset>
+            <legend>Сетка:</legend>
+            <ul>
+              <li>
+                <input type="radio" id="filter-adaptive" name="grid" value="adaptive" checked>
+                <label for="filter-adaptive">Адаптивная</label>
+              </li>
+              <li>
+                <input type="radio" id="filter-fixed" name="grid" value="fixed">
+                <label for="filter-fixed">Фиксированная</label>
+              </li>
+              <li>
+                <input type="radio" id="filter-rubber" name="grid" value="rubber">
+                <label for="filter-rubber">Резиновая</label>
+              </li>
+            </ul>
+          </fieldset>
+          <fieldset>
+            <legend>Особености:</legend>
+            <ul>
+              <li>
+                <input type="checkbox" id="filter-slider" name="slider" checked>
+                <label for="filter-slider">Слайдер</label>
+              </li>
+              <li>
+                <input type="checkbox" id="filter-benefits-block" name="benefits-block">
+                <label for="filter-benefits-block">Блок преимуществ</label>
+              </li>
+              <li>
+                <input type="checkbox" id="filter-news" name="news" checked>
+                <label for="filter-news">Новости</label>
+              </li>
+              <li>
+                <input type="checkbox" id="filter-gallery" name="gallery">
+                <label for="filter-gallery">Галерея</label>
+              </li>
+              <li>
+                <input type="checkbox" id="filter-basket" name="basket">
+                <label for="filter-basket">Корзина</label>
+              </li>
+            </ul>
+          </fieldset>
+          <button type="submit">Показать</button>
+        </form>
       </section>
 
       <section>
         <h2>Сортировка шаблонов</h2>
         <p>Сортировать:</p>
         <ul>
-          <li>По цене</li>
-          <li>По типу</li>
-          <li>По названию</li>
+          <li>
+            <button type="button">По цене</button>
+          </li>
+          <li>
+            <button type="button">По типу</button>
+          </li>
+          <li>
+            <button type="button">По названию</button>
+          </li>
+        </ul>
+        <ul>
+          <li>
+            <button type="button">По убыванию</button>
+          </li>
+          <li>
+            <button type="button">По возрастанию</button>
+          </li>
         </ul>
       </section>
 
@@ -128,7 +201,7 @@
           191186, Санкт-Петербург,<br>
           ул. Б. Конюшенная, д. 19/8<br><br>
           тел. +7 (812) 275-75-75<br>
-          <button>Напишите нам</button>
+          <a href="write-us.html">Напишите нам</a>
         </p>
         <img src="img/map-marker.png" alt="Маркер на карте">
       </section>
@@ -149,7 +222,22 @@
 
     <section>
       <h2>Напишите нам</h2>
-      <!-- Здесь будет форма обратной связи -->
+      <form action="http://echo.htmlacademy.ru" method="post">
+        <p>
+          <label for="write-us-name">Ваше имя:</label>
+          <input id="write-us-name" name="name" type="text" placeholder="Имя Фамилия">
+        </p>
+        <p>
+          <label for="write-us-email">Ваш e-mail:</label>
+          <input id="write-us-email" name="email" type="email" placeholder="email@example.com">
+        </p>
+        <p>
+          <label for="write-us-message">Текст письма:</label>
+          <textarea id="write-us-message" name="message" placeholder="В свободной форме"></textarea>
+        </p>
+        <button type="submit">Отправить</button>
+      </form>
+      <button type="button">Закрыть</button>
     </section>
   </body>
 </html>

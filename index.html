@@ -147,7 +147,7 @@
           191186, Санкт-Петербург,<br>
           ул. Б. Конюшенная, д. 19/8<br><br>
           тел. +7 (812) 275-75-75<br>
-          <button>Напишите нам</button>
+          <a href="write-us.html">Напишите нам</a>
         </p>
         <img src="img/map-marker.png" alt="Маркер на карте">
       </section>
@@ -168,7 +168,22 @@
 
     <section>
       <h2>Напишите нам</h2>
-      <!-- Здесь будет форма обратной связи -->
+      <form action="http://echo.htmlacademy.ru" method="post">
+        <p>
+          <label for="write-us-name">Ваше имя:</label>
+          <input id="write-us-name" name="name" type="text" placeholder="Имя Фамилия">
+        </p>
+        <p>
+          <label for="write-us-email">Ваш e-mail:</label>
+          <input id="write-us-email" name="email" type="email" placeholder="email@example.com">
+        </p>
+        <p>
+          <label for="write-us-message">Текст письма:</label>
+          <textarea id="write-us-message" name="message" placeholder="В свободной форме"></textarea>
+        </p>
+        <button type="submit">Отправить</button>
+      </form>
+      <button type="button">Закрыть</button>
     </section>
   </body>
 </html>
