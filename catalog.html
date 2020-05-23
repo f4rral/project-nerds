@@ -18,17 +18,17 @@
         <ul class="site-navigation">
           <li><a href="#">Студия</a></li>
           <li><a href="#">Клиенты</a></li>
-          <li class="navigation_selected"><a href="#">Магазин</a></li>
+          <li><a class="current-page" href="#">Магазин</a></li>
           <li><a href="#">Контакты</a></li>
         </ul>
         <ul class="user-navigation">
-          <li><a href="#">Корзина</a></li>
+          <li class="buy-cart" ><a href="#">Корзина</a></li>
         </ul>
       </nav>
     </header>
 
     <!-- MAIN -->
-    <main class="main-content">
+    <main class="main-content inner-page">
 
       <h1 class="page-title">Магазин готовых шаблонов</h1>
 
@@ -38,57 +38,58 @@
           <form class="filter" action="http://echo.htmlacademy.ru" method="get">
             <fieldset class="filter-price">
               <legend>Стоимость:</legend>
-              <p>
-                <label class="visually-hidden" for="filter-price">Цена</label>
-                <input type="range" id="filter-price" min="0" max="25000" step="500">
-              </p>
-              <p>
-                <label for="filter-price-min">От</label>
-                <input type="text" id="filter-price-min">
-              </p>
-              <p>
-                <label for="filter-price-max">До</label>
-                <input type="text" id="filter-price-max">
-              </p>
+              <div class="range-filter">
+                <div class="range-controls">
+                  <div class="scale">
+                    <div class="bar"></div>
+                  </div>
+                  <div class="toggle toggle-min"></div>
+                  <div class="toggle toggle-max"></div>
+                </div>
+                <div class="price-controls">
+                  <label class="min-price">от <input type="text" name="min-price" value="0"></label>
+                  <label class="max-price">до <input type="text" name="max-price" value="15000"></label>
+                </div>
+              </div>
             </fieldset>
             <fieldset class="filter-grid">
               <legend>Сетка:</legend>
               <ul>
-                <li>
-                  <input class="filter-input" type="radio" id="filter-adaptive" name="grid" value="adaptive" checked>
+                <li class="filter-grid-item">
+                  <input class="visually-hidden filter-input-radio" type="radio" id="filter-adaptive" name="grid" value="adaptive" checked>
                   <label for="filter-adaptive">Адаптивная</label>
                 </li>
-                <li>
-                  <input class="filter-input" type="radio" id="filter-fixed" name="grid" value="fixed">
+                <li class="filter-grid-item">
+                  <input class="visually-hidden filter-input-radio" type="radio" id="filter-fixed" name="grid" value="fixed">
                   <label for="filter-fixed">Фиксированная</label>
                 </li>
-                <li>
-                  <input class="filter-input" type="radio" id="filter-rubber" name="grid" value="rubber" disabled>
+                <li class="filter-grid-item">
+                  <input class="visually-hidden filter-input-radio" type="radio" id="filter-rubber" name="grid" value="rubber" disabled>
                   <label for="filter-rubber">Резиновая</label>
                 </li>
               </ul>
             </fieldset>
             <fieldset class="filter-feature">
-              <legend>Особености:</legend>
+              <legend>Особенности:</legend>
               <ul>
-                <li>
-                  <input class="filter-input" type="checkbox" id="filter-slider" name="slider" checked>
+                <li class="filter-feature-item">
+                  <input class="visually-hidden filter-input-checkbox" type="checkbox" id="filter-slider" name="slider" checked>
                   <label for="filter-slider">Слайдер</label>
                 </li>
-                <li>
-                  <input class="filter-input" type="checkbox" id="filter-benefits-block" name="benefits-block">
+                <li class="filter-feature-item">
+                  <input class="visually-hidden filter-input-checkbox" type="checkbox" id="filter-benefits-block" name="benefits-block">
                   <label for="filter-benefits-block">Блок преимуществ</label>
                 </li>
-                <li>
-                  <input class="filter-input" type="checkbox" id="filter-news" name="news" checked>
+                <li class="filter-feature-item">
+                  <input class="visually-hidden filter-input-checkbox" type="checkbox" id="filter-news" name="news" checked>
                   <label for="filter-news">Новости</label>
                 </li>
-                <li>
-                  <input class="filter-input" type="checkbox" id="filter-gallery" name="gallery">
+                <li class="filter-feature-item">
+                  <input class="visually-hidden filter-input-checkbox" type="checkbox" id="filter-gallery" name="gallery">
                   <label for="filter-gallery">Галерея</label>
                 </li>
-                <li>
-                  <input class="filter-input" type="checkbox" id="filter-basket" name="basket" disabled>
+                <li class="filter-feature-item">
+                  <input class="visually-hidden filter-input-checkbox" type="checkbox" id="filter-basket" name="basket" disabled>
                   <label for="filter-basket">Корзина</label>
                 </li>
               </ul>
@@ -99,32 +100,37 @@
         
         <section class="catalog">
           <div class="sorting">
-            <h2 class="visually-hidden">Сортировка шаблонов</h2>
-            <p>Сортировать:</p>
-            <ul class="sorting-list">
-              <li>
-                <input class="sorting-input" type="radio" id="sorting-price" name="sorting-class" value="price" checked>
-                <label for="sorting-price">По цене</label>
-              </li>
-              <li>
-                <input class="sorting-input" type="radio" id="sorting-type" name="sorting-class" value="type">
-                <label for="sorting-type">По типу</label>
-              </li>
-              <li>
-                <input class="sorting-input" type="radio" id="sorting-name" name="sorting-class" value="name">
-                <label for="sorting-name">По названию</label>
-              </li>
-            </ul>
-            <ul class="sorting-list">
-              <li>
-                <input class="sorting-input" type="radio" id="sort-descending" name="sorting" value="descending" checked>
-                <label for="sort-descending">По убыванию</label>
-              </li>
-              <li>
-                <input class="sorting-input" type="radio" id="sort-ascending" name="sorting" value="ascending">
-                <label for="sort-ascending">По возрастанию</label>
-              </li>
-            </ul>
+            <h2>Сортировать:</h2>
+            <div class="sorting-list-wrapper">
+              <ul class="sorting-type-list">
+                <li>
+                  <input class="sorting-input visually-hidden" type="radio" id="sorting-price" name="sorting-class" value="price" checked>
+                  <label for="sorting-price">По цене</label>
+                </li>
+                <li>
+                  <input class="sorting-input visually-hidden" type="radio" id="sorting-type" name="sorting-class" value="type">
+                  <label for="sorting-type">По типу</label>
+                </li>
+                <li>
+                  <input class="sorting-input visually-hidden" type="radio" id="sorting-name" name="sorting-class" value="name">
+                  <label for="sorting-name">По названию</label>
+                </li>
+              </ul>
+              <ul class="sorting-order-list">
+                <li>
+                  <input class="sorting-input visually-hidden" type="radio" id="sort-down-dir" name="sorting" value="descending" checked>
+                  <label for="sort-down-dir">
+                    <img class="sort-down-dir-img" src="img/ic-sort-dir.svg" width="11px" height="10px" alt="По убыванию">
+                  </label>
+                </li>
+                <li>
+                  <input class="sorting-input visually-hidden" type="radio" id="sort-up-dir" name="sorting" value="ascending">
+                  <label for="sort-up-dir">
+                    <img class="sort-up-dir-img" src="img/ic-sort-dir.svg" width="11px" height="10px" alt="По возрастанию">
+                  </label>
+                </li>
+              </ul>
+            </div>
           </div>
     
           <div class="templates">
@@ -139,7 +145,7 @@
                 </div>
                 <div class="template-info">
                   <a class="title" href="#">Sedona</a>
-                  <p class="description">Информационный сайт для туристов</p>
+                  <p class="description">Информационный сайт для&nbsp;туристов</p>
                   <a class="button button_pink" href="#">9 900 руб.</a>
                 </div>
               </li>
@@ -216,10 +222,10 @@
             </ul>
           </div>
           <ul class="pagination-list">
-            <li><a class="button pagination-current">1</a></li>
-            <li><a class="button button_grey" href="#">2</a></li>
-            <li><a class="button button_grey" href="#">3</a></li>
-            <li><a class="button button_grey" href="#">Следующая</a></li>
+            <li class="pagination-item"><a class="button pagination-current">1</a></li>
+            <li class="pagination-item"><a class="button button_grey">2</a></li>
+            <li class="pagination-item"><a class="button button_grey">3</a></li>
+            <li class="pagination-item"><a class="button button_grey">Следующая</a></li>
           </ul>
         </section>
       </div>
@@ -237,8 +243,8 @@
               191186, Санкт-Петербург,<br>
               ул. Б. Конюшенная, д. 19/8<br><br>
               тел. +7 (812) 275-75-75<br>
-              <a class="button button_pink" href="write-us.html">Напишите нам</a>
             </p>
+            <a class="button button_pink" href="write-us.html">Напишите нам</a>
           </div>
         </div>
       </section>
@@ -256,10 +262,10 @@
             <a href="#"><img src="img/ic-insta.svg" width="21" height="21" alt="Иконка Инстаграма"></a>
           </li>
         </ul>
-        <p class="footer-social-title">
-          <span class="slogan">Давайте дружить, это выгодно!</span><br>
-          <span class="discount">Скидка 10% для друзей из социальных сетей.</span>
-        </p>
+        <div class="footer-social-title">
+          <p class="slogan">Давайте дружить, это выгодно!</p>
+          <p class="discount">Скидка 10% для друзей из социальных сетей.</p>
+        </div>
       </section>
     </footer>
 

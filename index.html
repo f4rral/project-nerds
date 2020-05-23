@@ -22,7 +22,7 @@
           <li><a href="#">Контакты</a></li>
         </ul>
         <ul class="user-navigation">
-          <li><a href="#">Корзина</a></li>
+          <li class="buy-cart" ><a href="#">Корзина</a></li>
         </ul>
       </nav>
     </header>
@@ -32,31 +32,30 @@
       <h1 class="visually-hidden">Студия «Нёрдс»</h1>
       <section class="slider">
         <div class="container">
-          <h2 class="visually-hidden">Особености работы</h2>
+          <h2 class="visually-hidden">Приемущества</h2>
+          <div class="slider-controls">
+            <i class="active"></i>
+            <i></i>
+            <i></i>
+          </div>
           <ul class="slider-list">
             <li class="slider-item">
-              <p class="slider-title">Долго, дорого, скрупулезно.</p>
-              <p class="slider-description">Математически выверенный дизайн 
+              <h3>Долго, дорого,<br> скрупулезно.</h3>
+              <p>Математически выверенный дизайн<br>
                 для вашего сайта или мобильного приложения.</p>
               <a class="button button_pink" href="#">Узнать больше</a>
-              <img src="img/slide-1.png" width="698" height="413"
-                alt="Логотип сладера">
             </li>
-            <li class="slider-item visually-hidden">
-              <p class="slider-title">Любим математику как никто другой</p>
-              <p class="slider-description">Никакого креатива, только математические формулы 
+            <li class="slider-item">
+              <h3>Любим математику<br> как никто другой</h3>
+              <p>Никакого креатива, только математические формулы<br>
                 для расчета идеальных пропорций.</p>
               <a class="button button_pink" href="#">Узнать больше</a>
-              <img src="img/slide-2.png" width="663" height="430"
-                alt="Логотип сладера">
             </li>
-            <li class="slider-item visually-hidden">
-              <p class="slider-title">Только ночь, только хардкор</p>
-              <p class="slider-description">Работать днем, как все? Мы против этого.
+            <li class="slider-item">
+              <h3>Только ночь,<br> только хардкор</h3>
+              <p>Работать днем, как все? Мы против этого.<br>
                 Ближе к полуночи работа только начинается.</p>
               <a class="button button_pink" href="#">Узнать больше</a>
-              <img src="img/slide-3.png" width="759" height="411"
-                alt="Логотип сладера">
             </li>
           </ul>
         </div>
@@ -80,7 +79,7 @@
             </li>
             <li class="directions-item">
               <img src="img/item-presentations.png" width="300" height="146" alt="Презентации">
-              <h3>Приложения</h3>
+              <h3>Презентации</h3>
               <p>Вы даже не подозреваете, насколько вы изумительны!</p>
               <a class="button button_yellow" href="#">Заказать</a>
             </li>
@@ -89,16 +88,17 @@
 
         <div class="about-wrapper ">
           <section class="about">
-            <h2 class="visually-hidden">О нас</h2>
-            <p class="about-title">Мы — маленькая, но гордая дизайн-студия из Краснодара.</p>
-            <p class="about-directions">Исповедуем принципы минимализма и чистоты. 
+            <h2>Мы — маленькая, но гордая дизайн-студия из Краснодара.</h2>
+            <p>
+              Исповедуем принципы минимализма и чистоты. 
               Ставим математический расчет превыше креатива. 
-              Работаем не покладая рук, как роботы.</p>
-            <h3>Выполняем заказы на разработку:</h3>
-            <ul class="about-order-list">
-              <li>Веб-сайтов любой сложности</li><br>
-              <li>Мобильных приложений для iOS и Android</li><br>
-              <li>Слайдшоу и видео для корпоративных презентаций</li>
+              Работаем не покладая рук, как роботы.
+            </p>
+            <b>Выполняем заказы на разработку:</b>
+            <ul class="about-list">
+              <li class="about-item">Веб-сайтов любой сложности</li><br>
+              <li class="about-item">Мобильных приложений для iOS и Android</li><br>
+              <li class="about-item">Слайдшоу и видео для корпоративных презентаций</li>
             </ul>
           </section>
           
@@ -155,8 +155,8 @@
               191186, Санкт-Петербург,<br>
               ул. Б. Конюшенная, д. 19/8<br><br>
               тел. +7 (812) 275-75-75<br>
-              <a class="button button_pink" href="write-us.html">Напишите нам</a>
             </p>
+            <a class="button button_pink" href="write-us.html">Напишите нам</a>
           </div>
         </div>
       </section>
@@ -174,10 +174,10 @@
             <a href="#"><img src="img/ic-insta.svg" width="21" height="21" alt="Иконка Инстаграма"></a>
           </li>
         </ul>
-        <p class="footer-social-title">
-          <span class="slogan">Давайте дружить, это выгодно!</span><br>
-          <span class="discount">Скидка 10% для друзей из социальных сетей.</span>
-        </p>
+        <div class="footer-social-title">
+          <p class="slogan">Давайте дружить, это выгодно!</p>
+          <p class="discount">Скидка 10% для друзей из социальных сетей.</p>
+        </div>
       </section>
     </footer>
 
