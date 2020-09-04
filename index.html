@@ -39,7 +39,7 @@
             <i></i>
           </div>
           <ul class="slider-list">
-            <li class="slider-item slider-show">
+            <li class="slider-item">
               <h3>Долго, дорого,<br> скрупулезно.</h3>
               <p>Математически выверенный дизайн<br>
                 для вашего сайта или мобильного приложения.</p>
@@ -127,10 +127,10 @@
           <h2 class="visually-hidden">Наши партнёры</h2>
           <ul class="partners-list">
             <li class="partners-item">
-              <a href="https://htmlacademy.ru/" target="_blank"><img src="img/logo-html-academy.png" width="199" height="68" alt="Логотип HTML Academy"></a>
+              <a href="#"><img src="img/logo-html-academy.png" width="199" height="68" alt="Логотип HTML Academy"></a>
             </li>
             <li class="partners-item">
-              <a href="https://f4rral.github.io/project-barbershop/" target="_blank"><img src="img/logo-borodinski.png" width="209" height="90" alt="Логотип Бородинский"></a>
+              <a href="#"><img src="img/logo-borodinski.png" width="209" height="90" alt="Логотип Бородинский"></a>
             </li>
             <li class="partners-item">
               <a href="#"><img src="img/logo-pink.png" width="185" height="52" alt="Логотип PINK"></a>
@@ -146,34 +146,21 @@
 
     <!-- FOOTER -->
     <footer class="main-footer">
-      <section class="footer-map">
-        <div class="map-interactive">
-          <iframe 
-            src="https://yandex.ru/map-widget/v1/-/CCQxQUHO8A" 
-            frameborder="1" allowfullscreen="true">
-          </iframe>
-        </div>
-
-        <div class="contacts-wrapper container">
-          <div class="contacts">
+      <section class="footer-location">
+        <h2 class="visually-hidden">Где мы находимся</h2>
+        <div class="address-wrapper container">
+          <div class="address">
             <h3>Nёrds design studio</h3>
             <p>
-              <a class="address" href="https://yandex.ru/maps/-/CCQxQUHOLB" target="_blank">
-                191186, Санкт-Петербург,<br>
-                ул. Б. Конюшенная, д. 19/8<br>
-              </a>
-
-              <a class="telephone" href="tel:+78122757575">
-                <span>
-                  тел. +7 (812) 275-75-75<br>
-                </span>
-              </a>
+              191186, Санкт-Петербург,<br>
+              ул. Б. Конюшенная, д. 19/8<br><br>
+              тел. +7 (812) 275-75-75<br>
             </p>
-            <a class="button button_pink button-write-us" href="write-us.html">Напишите нам</a>
+            <a class="button button_pink" href="write-us.html">Напишите нам</a>
           </div>
         </div>
       </section>
-      
+
       <section class="footer-social container">
         <h2 class="visually-hidden">Мы в социальных сетях</h2>
         <ul class="social-list">
@@ -195,33 +182,24 @@
     </footer>
 
     <!-- MODAL -->
-    <section class="write-us">
+    <section class="write-us visually-hidden">
       <h2>Напишите нам</h2>
-      <form class="write-us-form" action="http://echo.htmlacademy.ru" method="post">
-        <p class="write-us-contacts">
-          <label>
-            Ваше имя: <br> 
-            <input name="name" type="text" placeholder="Имя Фамилия" required>
-          </label>
-          <label>
-            Ваш e-mail: <br>
-            <input name="email" type="email" placeholder="email@example.com" required>
-          </label>
+      <form action="http://echo.htmlacademy.ru" method="post">
+        <p>
+          <label for="write-us-name">Ваше имя:</label>
+          <input id="write-us-name" name="name" type="text" placeholder="Имя Фамилия">
         </p>
-        <p class="write-us-message">
-          <label>
-            Текст письма: <br>
-            <textarea name="message" placeholder="В свободной форме" required></textarea>
-          </label>
+        <p>
+          <label for="write-us-email">Ваш e-mail:</label>
+          <input id="write-us-email" name="email" type="email" placeholder="email@example.com">
         </p>
-        <p class="write-us-submit">
-          <button class="button button_pink" type="submit">Отправить</button>
+        <p>
+          <label for="write-us-message">Текст письма:</label>
+          <textarea id="write-us-message" name="message" placeholder="В свободной форме"></textarea>
         </p>
+        <button class="button button_pink" type="submit">Отправить</button>
       </form>
-      <button class="write-us-close" type="button">Закрыть</button>
+      <button type="button">Закрыть</button>
     </section>
-
-    <script src="js/write-us.js"></script>
-    <script src="js/sleder.js"></script>
   </body>
 </html>
